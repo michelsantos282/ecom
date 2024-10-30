@@ -1,7 +1,6 @@
 package user
 
 import (
-	"encoding/json"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -20,8 +19,7 @@ func (h *Handler) RegisterRoutes(router *mux.Router) {
 }
 
 func (h *Handler) handleLogin(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode("message: Hello World")
+
 }
 
 func (h *Handler) handleRegister(w http.ResponseWriter, r *http.Request) {
